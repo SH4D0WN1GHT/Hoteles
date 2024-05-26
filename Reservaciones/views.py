@@ -5,9 +5,6 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
 
-def main(request):
-    return render(request, 'base.html')
-
 def index(request):
     return render(request, 'index.html')
 
@@ -20,7 +17,7 @@ def signup(request):
                 user = User.objects.create_user(username=request.POST['username'], password=request.POST['password1'])
                 user.save()
                 login(request, user)
-                return redirect('tasks')
+                return redirect('index')
             except IntegrityError:
                 return render(request, 'signup.html', {'form': UserCreationForm, 'prompt': 'Username already exists'})
         return render(request, 'signup.html', {'form': UserCreationForm, 'prompt': 'Passwords do not match'})
@@ -38,8 +35,8 @@ def user_login(request):
     return render(request, 'login.html')
 
 @login_required
-def tasks(request):
-    return render(request, 'tasks.html')
+def main(request):
+    return render(request, 'base.html')
 
 @login_required
 def user_logout(request):
