@@ -1,55 +1,79 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<h1 class="title">Home</h1>
-<div class="titulo-alojamientos">
-    <h3 class="titulo-alojamientos">Descubre tu paraíso perfecto</h3>
-</div>
-<section class="alojamientos">
-    <article class="card col-lg-2 col-md-3 col-sm-2">
-        <div>
-            <img src="{% static 'images/hoteles.jpg' %}" alt="Hoteles" class="img-alojamiento">
-        </div>
-        <h4 class="tipo-alojamiento">Hoteles</h4>
-    </article>
-    <article class="card col-lg-2 col-md-3 col-sm-2">
-        <div>
-            <img src="{% static 'images/departamentos.jpg' %}" alt="Departamentos" class="img-alojamiento">
-        </div>
-        <h4 class="tipo-alojamiento">Departamentos</h4>
-    </article>
-    <article class="card col-lg-2 col-md-3 col-sm-2">
-        <div>
-            <img src="{% static 'images/resorts.jpg' %}" alt="Resorts" class="img-alojamiento">
-        </div>
-        <h4 class="tipo-alojamiento">Resorts</h4>
-    </article>
-    <article class="card col-lg-2 col-md-3 col-sm-2">
-        <div>
-            <img src="{% static 'images/villas.jpg' %}" alt="Villas" class="img-alojamiento">
-        </div>
-        <h4 class="tipo-alojamiento">Villas</h4>
-    </article>
-</section>
-<section class="moda container">
-    <div class="row">
-        <article class="destinos col-12 col-md-6 col-lg-3">
-            <h4 class="titulo-destinos">Ciudad de México</h4>
-            <img src="{% static '/images/ciudad-de-mexico.jpg' %}" alt="Ciudad de México" class="img-destinos">
-        </article>
-        <article class="destinos col-12 col-md-6 col-lg-3">
-            <h4 class="titulo-destinos">Zacatecas</h4>
-            <img src="{% static '/images/zacatecas.jpg' %}" alt="Zacatecas" class="img-destinos">
-        </article>
-        <article class="destinos col-12 col-md-6 col-lg-3">
-            <h4 class="titulo-destinos">Monterrey</h4>
-            <img src="{% static '/images/monterrey.jpg' %}" alt="Monterrey" class="img-destinos">
-        </article>
-        <article class="destinos col-12 col-md-6 col-lg-3">
-            <h4 class="titulo-destinos">Guadalajara</h4>
-            <img src="{% static '/images/guadalajara.jpg' %}" alt="Guadalajara" class="img-destinos">
-        </article>
+<div class="container">
+    <div class="banner">
+        <img src="{% static 'images/banner_base.jpg' %}" alt="Banner" class="img-banner">
     </div>
-</section>
-
+    <h1 class="title">Home</h1>
+    <div class="titulo-alojamientos">
+        <h3 class="titulo-alojamientos">Descubre tu paraíso perfecto</h3>
+    </div>
+    <section class="alojamientos container">
+        <article class="card col-lg-2 col-md-3 col-sm-2">
+            <div>
+                <img src="{% static 'images/hoteles.jpg' %}" alt="Hoteles" class="img-alojamiento">
+            </div>
+            <h4 class="tipo-alojamiento">Hoteles</h4>
+        </article>
+        <article class="card col-lg-2 col-md-3 col-sm-2">
+            <div>
+                <img src="{% static 'images/departamentos.jpg' %}" alt="Departamentos" class="img-alojamiento">
+            </div>
+            <h4 class="tipo-alojamiento">Departamentos</h4>
+        </article>
+        <article class="card col-lg-2 col-md-3 col-sm-2">
+            <div>
+                <img src="{% static 'images/resorts.jpg' %}" alt="Resorts" class="img-alojamiento">
+            </div>
+            <h4 class="tipo-alojamiento">Resorts</h4>
+        </article>
+        <article class="card col-lg-2 col-md-3 col-sm-2">
+            <div>
+                <img src="{% static 'images/villas.jpg' %}" alt="Villas" class="img-alojamiento">
+            </div>
+            <h4 class="tipo-alojamiento">Villas</h4>
+        </article>
+    </section>
+    <section class="moda">
+        <div class="container">
+            <div class="row justify-content-center">
+                <article class="destinos col-12 col-md-6 d-flex flex-column align-items-center">
+                    <div class="position-relative">
+                        <h4 class="titulo-destinos">Ciudad de México</h4>
+                        <picture class="pic-destinos">
+                            <img src="{% static '/images/ciudad-de-mexico.jpg' %}" alt="Ciudad de México" class="img-destinos img-fluid">
+                        </picture>
+                    </div>
+                </article>
+                <article class="destinos col-12 col-md-6 d-flex flex-column align-items-center">
+                    <div class="position-relative">
+                        <h4 class="titulo-destinos">Zacatecas</h4>
+                        <picture class="pic-destinos">
+                            <img src="{% static '/images/zacatecas.jpg' %}" alt="Zacatecas" class="img-destinos img-fluid">
+                        </picture>
+                    </div>
+                </article>
+            </div>
+            <div class="row justify-content-center">
+                <article class="destinos col-12 col-md-6 d-flex flex-column align-items-center">
+                    <div class="position-relative">
+                        <h4 class="titulo-destinos">Monterrey</h4>
+                        <picture class="pic-destinos">
+                            <img src="{% static '/images/monterrey.jpg' %}" alt="Monterrey" class="img-destinos img-fluid">
+                        </picture>
+                    </div>
+                </article>
+                <article class="destinos col-12 col-md-6 d-flex flex-column align-items-center">
+                    <div class="position-relative">
+                        <h4 class="titulo-destinos">Guadalajara</h4>
+                        <picture class="pic-destinos">
+                            <img src="{% static '/images/guadalajara.jpg' %}" alt="Guadalajara" class="img-destinos img-fluid">
+                        </picture>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}

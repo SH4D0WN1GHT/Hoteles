@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     gap: 10%;
     background: rgb(2,0,36);
+    padding: 20px;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,10,121,1) 33%, rgba(109,0,161,1) 100%); 
 }
 .card{

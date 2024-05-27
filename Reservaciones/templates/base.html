@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,13 +35,10 @@
         </ul>
         <p id="user">Usuario: {{user}}</p>
     </nav>
-    <div class="banner">
-        <img src="{% static 'images/banner_base.jpg' %}" alt="Banner" class="img-banner">
-    </div>
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-    </div>
+    <br>
+    {% block content %}
+    {% endblock %}
+    <br>
     <footer class="pie-pagina">
         <div class="contenedor">
             <div class="seccion">
@@ -52,6 +49,7 @@
                 <h4>Enlaces Rápidos</h4>
                 <ul>
                     <li><a href="{% url 'index' %}">Inicio</a></li>
+                    <li><a href="{% url 'contacto' %}">Contácto</a></li>
                 </ul>
             </div>
             <div class="seccion">

@@ -1,10 +1,27 @@
-.moda{
-    display: table-cell;
+.destinos{
+justify-content: center;
+align-items: center;
 }
-.img-destinos{
-    width: 50%;
+.pic-destinos{
+    justify-content: center;
     border-radius: 10px;
 }
-.titulo-destinos{
-    transform: translateY(10%);
+.position-relative {
+    position: relative;
+}
+.titulo-destinos {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.img-destinos {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }

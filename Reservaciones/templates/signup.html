@@ -1,15 +1,20 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-<h1 class="title">Sign up</h1>
-<h3>Por favor introduzca un nombre de usuario y una contraseña validos</h3>
+<div class="container">
+    <div class="banner">
+        <img src="{% static 'images/banner_signup.jpg' %}" alt="Banner" class="img-banner">
+    </div>
+    <h1 class="title">Sign up</h1>
+    <h3>Por favor introduzca un nombre de usuario y una contraseña validos</h3>
 
-{{prompt}}
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button>
-        Sign up
-    </button>
-</form>
+    {{prompt}}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+          Sign up
+        </button>
+    </form>
+</div>
 {% endblock %}

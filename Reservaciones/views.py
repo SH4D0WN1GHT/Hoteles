@@ -42,3 +42,6 @@ def main(request):
 def user_logout(request):
     logout(request)
     return redirect('index')
+
+def contacto(request):
+    return render(request, 'contacto.html')
