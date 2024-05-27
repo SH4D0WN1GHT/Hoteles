@@ -2,30 +2,51 @@
 {% block content %}
 {% load static %}
 <h1 class="title">Home</h1>
+<div class="titulo-alojamientos">
+    <h3 class="titulo-alojamientos">Descubre tu paraíso perfecto</h3>
+</div>
 <section class="alojamientos">
     <article class="card col-lg-2 col-md-3 col-sm-2">
         <div>
             <img src="{% static 'images/hoteles.jpg' %}" alt="Hoteles" class="img-alojamiento">
         </div>
-        <h3 class="tipo-alojamiento">Hoteles</h3>
+        <h4 class="tipo-alojamiento">Hoteles</h4>
     </article>
     <article class="card col-lg-2 col-md-3 col-sm-2">
         <div>
             <img src="{% static 'images/departamentos.jpg' %}" alt="Departamentos" class="img-alojamiento">
         </div>
-        <h3 class="tipo-alojamiento">Departamentos</h3>
+        <h4 class="tipo-alojamiento">Departamentos</h4>
     </article>
     <article class="card col-lg-2 col-md-3 col-sm-2">
         <div>
             <img src="{% static 'images/resorts.jpg' %}" alt="Resorts" class="img-alojamiento">
         </div>
-        <h3 class="tipo-alojamiento">Resorts</h3>
+        <h4 class="tipo-alojamiento">Resorts</h4>
     </article>
     <article class="card col-lg-2 col-md-3 col-sm-2">
         <div>
             <img src="{% static 'images/villas.jpg' %}" alt="Villas" class="img-alojamiento">
         </div>
-        <h3 class="tipo-alojamiento">Villas</h3>
+        <h4 class="tipo-alojamiento">Villas</h4>
+    </article>
+</section>
+<section class="moda">
+    <article class="destinos">
+        <h4 class="titulo-destinos"></h4>
+        <img src="" alt="Ciudad de México" class="img-destinos">
+    </article>
+    <article class="destinos">
+        <h4 class="titulo-destinos"></h4>
+        <img src="" alt="Zacatecas" class="img-destinos">
+    </article>
+    <article class="destinos">
+        <h4 class="titulo-destinos"></h4>
+        <img src="" alt="" class="img-destinos">
+    </article>
+    <article class="destinos">
+        <h4 class="titulo-destinos"></h4>
+        <img src="" alt="" class="img-destinos">
     </article>
 </section>
 {% endblock %}

@@ -1,15 +1,17 @@
 .alojamientos{
-    /*display: flex;
+    margin: 20px;
+    display: flex;
     flex-wrap: wrap;
-    gap: 5%;*/
+    gap: 10%;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,10,121,1) 33%, rgba(109,0,161,1) 100%); 
 }
 .card{
-    /*flex: 1 1 calc(25% - 20px); /* Ajuste para 4 columnas */
+    flex: 1 1 calc(25% - 20px); /* Ajuste para 4 columnas */
     background-color: white;
     text-align: center;
     border-radius: 10px;
+    height: auto;
 }
 .img-alojamiento{
     height: 100px;
