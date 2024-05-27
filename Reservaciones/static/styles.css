@@ -3,6 +3,7 @@
 @import url('pie.css');
 @import url('alojamientos.css');
 @import url('moda.css');
+@import url('contacto.css');
 
 body{
     background-image: url('images/fondo.jpg');

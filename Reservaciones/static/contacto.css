@@ -1,0 +1,13 @@
+.seccion-contacto {
+    text-align: center; /* Opcional: para centrar el contenido horizontalmente */
+}
+
+.redes-sociales-contacto a {
+    display: inline-block; /* Hace que los enlaces se alineen en una sola línea */
+    margin: 0 10px; /* Opcional: añade espacio entre los iconos */
+}
+
+.redes-sociales-contacto img {
+    width: 50px;
+    height: 50px;
+}
