@@ -1,6 +1,7 @@
 @import url('banner.css');
 @import url('navegacion.css');
 @import url('pie.css');
+@import url('alojamientos.css');
 
 body{
     background-image: url('images/fondo.jpg');

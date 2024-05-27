@@ -24,11 +24,11 @@
 
 .espacio-logo {
     flex-shrink: 0;
-    border-radius: 10px;
 }
 
 .logo {
     height: 50px;
+    border-radius: 10px;
 }
 
 .navegacion ul {

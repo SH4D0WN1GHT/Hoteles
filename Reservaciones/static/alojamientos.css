@@ -1,0 +1,28 @@
+.alojamientos{
+    /*display: flex;
+    flex-wrap: wrap;
+    gap: 5%;*/
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,10,121,1) 33%, rgba(109,0,161,1) 100%); 
+}
+.card{
+    /*flex: 1 1 calc(25% - 20px); /* Ajuste para 4 columnas */
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+.img-alojamiento{
+    height: 100px;
+    width: 99%;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Ajuste para 2 columnas en pantallas más pequeñas */
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una columna en pantallas muy pequeñas */
+    }
+}
