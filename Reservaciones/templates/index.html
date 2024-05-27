@@ -31,22 +31,25 @@
         <h4 class="tipo-alojamiento">Villas</h4>
     </article>
 </section>
-<section class="moda">
-    <article class="destinos">
-        <h4 class="titulo-destinos"></h4>
-        <img src="" alt="Ciudad de México" class="img-destinos">
-    </article>
-    <article class="destinos">
-        <h4 class="titulo-destinos"></h4>
-        <img src="" alt="Zacatecas" class="img-destinos">
-    </article>
-    <article class="destinos">
-        <h4 class="titulo-destinos"></h4>
-        <img src="" alt="" class="img-destinos">
-    </article>
-    <article class="destinos">
-        <h4 class="titulo-destinos"></h4>
-        <img src="" alt="" class="img-destinos">
-    </article>
+<section class="moda container">
+    <div class="row">
+        <article class="destinos col-12 col-md-6 col-lg-3">
+            <h4 class="titulo-destinos">Ciudad de México</h4>
+            <img src="{% static '/images/ciudad-de-mexico.jpg' %}" alt="Ciudad de México" class="img-destinos">
+        </article>
+        <article class="destinos col-12 col-md-6 col-lg-3">
+            <h4 class="titulo-destinos">Zacatecas</h4>
+            <img src="{% static '/images/zacatecas.jpg' %}" alt="Zacatecas" class="img-destinos">
+        </article>
+        <article class="destinos col-12 col-md-6 col-lg-3">
+            <h4 class="titulo-destinos">Monterrey</h4>
+            <img src="{% static '/images/monterrey.jpg' %}" alt="Monterrey" class="img-destinos">
+        </article>
+        <article class="destinos col-12 col-md-6 col-lg-3">
+            <h4 class="titulo-destinos">Guadalajara</h4>
+            <img src="{% static '/images/guadalajara.jpg' %}" alt="Guadalajara" class="img-destinos">
+        </article>
+    </div>
 </section>
+
 {% endblock %}

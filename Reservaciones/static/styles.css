@@ -2,6 +2,7 @@
 @import url('navegacion.css');
 @import url('pie.css');
 @import url('alojamientos.css');
+@import url('moda.css');
 
 body{
     background-image: url('images/fondo.jpg');

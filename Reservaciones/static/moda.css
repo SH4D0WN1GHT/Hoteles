@@ -1,0 +1,10 @@
+.moda{
+    display: table-cell;
+}
+.img-destinos{
+    width: 50%;
+    border-radius: 10px;
+}
+.titulo-destinos{
+    transform: translateY(10%);
+}
