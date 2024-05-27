@@ -1,0 +1,8 @@
+.img-banner{
+    width: 100%; /* Hace que la imagen ocupe el ancho completo de su contenedor */
+    height: 300px; /* Ajusta la altura automáticamente para mantener la proporción */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    margin: 20px auto; /* Centra la imagen y agrega un margen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+}

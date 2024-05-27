@@ -1,0 +1,19 @@
+@import url('banner.css');
+@import url('navegacion.css');
+@import url('pie.css');
+
+body{
+    background-image: url('images/fondo.jpg');
+}
+/* Estilos para la pestaña activa */
+.active {
+    font-weight: bold;
+    color: white; /* o cualquier otro color que desees */
+}
+.container{
+    background-color: white;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}

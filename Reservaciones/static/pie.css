@@ -1,0 +1,72 @@
+.pie-pagina {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.pie-pagina .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pie-pagina .seccion {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.pie-pagina h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.pie-pagina p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.pie-pagina ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pie-pagina ul li {
+    margin-bottom: 10px;
+}
+
+.pie-pagina ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pie-pagina ul li a:hover {
+    text-decoration: underline;
+}
+
+.pie-pagina .redes-sociales a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pie-pagina .redes-sociales img {
+    width: 24px;
+    height: 24px;
+}
+
+.pie-pagina .copy {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 14px;
+}

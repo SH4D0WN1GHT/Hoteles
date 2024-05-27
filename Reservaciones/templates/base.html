@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% load static %}
-        <link rel="stylesheet" href="{% static '/CSS/styles.css' %}">
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/index">Home</a>
-                </li>
-                {% if user.is_authenticated %}
-                <li>
-                    <a href="/logout">Logout</a>
-                </li>
-                {% else %}
-                <li>
-                    <a href="/signup">Signup</a>
-                </li>
-                <li>
-                    <a href="/login">Login</a>
-                </li>
-                {% endif %}
-            </ul>
-            <p>Usuario: {{user}}</p>
-        </nav>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Reservaciones{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav class="navegacion">
+        <div class="espacio-logo">
+            <img src="{% static '/Video/Logo.gif' %}" alt="Logo" class="logo">
+        </div>
+        <ul>
+            <li class="pestañas">
+                <a href="{% url 'index' %}" {% if request.resolver_match.url_name == 'index' %}class="active"{% endif %}>Home</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="pestañas">
+                <a href="{% url 'logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="pestañas">
+                <a href="{% url 'signup' %}">Signup</a>
+            </li>
+            <li class="pestañas">
+                <a href="{% url 'login' %}">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+        <p id="user">Usuario: {{user}}</p>
+    </nav>
+    <div class="banner">
+        <img src="{% static 'images/banner_base.jpg' %}" alt="Banner" class="img-banner">
+    </div>
+    <div class="container">
         {% block content %}
         {% endblock %}
-    </body>
+    </div>
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="seccion">
+                <h4>Sobre Nosotros</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+            <div class="seccion">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                </ul>
+            </div>
+            <div class="seccion">
+                <h4>Contacto</h4>
+                <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Email: contacto@ejemplo.com</p>
+            </div>
+            <div class="seccion">
+                <h4>Síguenos</h4>
+                <div class="redes-sociales">
+                    <a href="#"><img src="{% static 'img/facebook.png' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'img/twitter.png' %}" alt="Twitter"></a>
+                    <a href="#"><img src="{% static 'img/instagram.png' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'img/linkedin.png' %}" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
 </html>
