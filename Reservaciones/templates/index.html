@@ -75,5 +75,14 @@
             </div>
         </div>
     </section>
+    <div>
+        <h3>Haz una reservación</h3>
+        <form action="{% url 'reservacion' %}" method="POST">
+            {% csrf_token %}
+            <button>
+                Reservar
+            </button>
+        </form>
+    </div>
 </div>
 {% endblock %}

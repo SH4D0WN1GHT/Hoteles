@@ -125,7 +125,7 @@ CREATE TABLE `auth_user` (
 
 LOCK TABLES `auth_user` WRITE;
 /*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
-INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$720000$DtKb3ALDJmMlxBbbftoMsv$ON2ZtTlEHZYARkTRmfOIhlHJtqdI2na5TGiHEqyzTpM=','2024-05-27 14:25:04.454223',0,'Admin','','','',0,1,'2024-05-26 21:47:29.770938');
+INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$720000$45XyoUDsKCW379PELrR2ZY$JHcyRAy0qMxspU3QCh/tEJWMjPmi1T1sT49oX3dJniE=','2024-05-28 02:24:59.628855',0,'dan','','','',0,1,'2024-05-28 02:24:58.705540');
 /*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,7 +267,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2024-05-26 21:32:22.299220'),(2,'auth','0001_initial','2024-05-26 21:32:23.650338'),(3,'admin','0001_initial','2024-05-26 21:32:24.019816'),(4,'admin','0002_logentry_remove_auto_add','2024-05-26 21:32:24.064447'),(5,'admin','0003_logentry_add_action_flag_choices','2024-05-26 21:32:24.094914'),(6,'contenttypes','0002_remove_content_type_name','2024-05-26 21:32:24.313453'),(7,'auth','0002_alter_permission_name_max_length','2024-05-26 21:32:24.501459'),(8,'auth','0003_alter_user_email_max_length','2024-05-26 21:32:24.660025'),(9,'auth','0004_alter_user_username_opts','2024-05-26 21:32:24.688263'),(10,'auth','0005_alter_user_last_login_null','2024-05-26 21:32:24.849615'),(11,'auth','0006_require_contenttypes_0002','2024-05-26 21:32:24.865311'),(12,'auth','0007_alter_validators_add_error_messages','2024-05-26 21:32:24.896149'),(13,'auth','0008_alter_user_username_max_length','2024-05-26 21:32:25.086694'),(14,'auth','0009_alter_user_last_name_max_length','2024-05-26 21:32:25.263717'),(15,'auth','0010_alter_group_name_max_length','2024-05-26 21:32:25.348449'),(16,'auth','0011_update_proxy_permissions','2024-05-26 21:32:25.382142'),(17,'auth','0012_alter_user_first_name_max_length','2024-05-26 21:32:25.563557'),(18,'sessions','0001_initial','2024-05-26 21:32:25.679803');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2024-05-28 02:04:43.881180'),(2,'auth','0001_initial','2024-05-28 02:04:44.413936'),(3,'admin','0001_initial','2024-05-28 02:04:44.564877'),(4,'admin','0002_logentry_remove_auto_add','2024-05-28 02:04:44.573411'),(5,'admin','0003_logentry_add_action_flag_choices','2024-05-28 02:04:44.585328'),(6,'contenttypes','0002_remove_content_type_name','2024-05-28 02:04:44.687333'),(7,'auth','0002_alter_permission_name_max_length','2024-05-28 02:04:44.757939'),(8,'auth','0003_alter_user_email_max_length','2024-05-28 02:04:44.813458'),(9,'auth','0004_alter_user_username_opts','2024-05-28 02:04:44.830457'),(10,'auth','0005_alter_user_last_login_null','2024-05-28 02:04:45.007486'),(11,'auth','0006_require_contenttypes_0002','2024-05-28 02:04:45.013488'),(12,'auth','0007_alter_validators_add_error_messages','2024-05-28 02:04:45.022488'),(13,'auth','0008_alter_user_username_max_length','2024-05-28 02:04:45.117044'),(14,'auth','0009_alter_user_last_name_max_length','2024-05-28 02:04:45.197140'),(15,'auth','0010_alter_group_name_max_length','2024-05-28 02:04:45.226142'),(16,'auth','0011_update_proxy_permissions','2024-05-28 02:04:45.237141'),(17,'auth','0012_alter_user_first_name_max_length','2024-05-28 02:04:45.318085'),(18,'sessions','0001_initial','2024-05-28 02:04:45.364918');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,8 +293,34 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('8pfxten1cdb9yua3zgqw08tdnyxrlvm6','.eJxVjDsOwjAQBe_iGlkYf9ampM8ZovXuggPIluKkQtwdIqWA9s3Me6kR16WMa5d5nFidlVGH3y0jPaRugO9Yb01Tq8s8Zb0peqddD43ledndv4OCvXxr6wVcJOAsROKdPUYTGZASkcMYQMjlIE7AGvIMJl4N2gQOTiCJg3p_APidOCI:1sBbHc:v_7BuIbgnbBZnqV0dGLJ6NgUYO2-BbvAfSNf4OmMS3I','2024-06-10 14:25:04.459919');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reservaciones`
+--
+
+DROP TABLE IF EXISTS `reservaciones`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reservaciones` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `tipo` tinytext,
+  `lugar` tinytext,
+  `fecha` datetime DEFAULT NULL,
+  `numero_tarjeta` varchar(16) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `reservaciones_ibfk_1` FOREIGN KEY (`id`) REFERENCES `usuarios` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reservaciones`
+--
+
+LOCK TABLES `reservaciones` WRITE;
+/*!40000 ALTER TABLE `reservaciones` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reservaciones` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -306,8 +332,8 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) NOT NULL,
-  `password` varchar(10) NOT NULL,
+  `username` tinytext,
+  `password` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -330,4 +356,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-27  8:55:08
+-- Dump completed on 2024-05-27 21:22:35

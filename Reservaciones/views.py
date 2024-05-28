@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
+from .forms import ReservacionForm
 
 def index(request):
     return render(request, 'index.html')
@@ -45,3 +46,13 @@ def user_logout(request):
 
 def contacto(request):
     return render(request, 'contacto.html')
+
+def crear_reservacion(request):
+    if request.method == 'POST':
+        form = ReservacionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')  # Redirigir a una lista de reservaciones o una página de éxito
+    else:
+        form = ReservacionForm()
+    return render(request, 'registro.html', {'form': form})
